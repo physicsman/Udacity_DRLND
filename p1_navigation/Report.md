@@ -1,8 +1,6 @@
 [//]: # (Image References)
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Rewards for Navigation"
-
-[image2]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Rewards for Navigation_Pixels"
+[image1]: https://github.com/physicsman/Udacity_DRLND/blob/master/p1_navigation/rewards_plot_navigation.png "Rewards for Navigation"
 
 # Report:
 
@@ -13,8 +11,6 @@ This navigation problem has the option of two state representations. The first i
 ### Plot of Rewards
 
 ![Rewards for Navigation][image1]
-
-![Rewards for Navigation_Pixels][image2]
 
 ### Ideas for Future Work
 
