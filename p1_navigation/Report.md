@@ -12,6 +12,14 @@ This navigation problem has the option of two state representations. The first i
 
 ![Rewards for Navigation][image1]
 
+### Hyperparameters 
+
+For the 1D case the hyperparameters were chosen to match those given in an example problem from there I adjusted each parameter individually to look for simple improvements however, even though the problem being solved is different the set of example parameters performed best.  
+
+For the 2D case a much lower ‘eps_start’ seemed to help the model train. I’m not sure how the CNN initialization coupled to exploration but letting the CNN pick actions early on was better than random choice. 
+
+There seems to be a lot that can be accomplished by tunning here however at this point exploration feels more like dart throwing than learning. 
+
 ### Ideas for Future Work
 
 I began implementing priority experience replay which selects sample observations during training with a bias toward rare events which would be classified by how much disagreement is seen between the local and target model when processing the observation. However it has yet to be fully incorporated into ‘dqn_agent.py’
