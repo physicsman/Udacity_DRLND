@@ -12,11 +12,15 @@ This navigation problem has the option of two state representations. The first i
 
 ![Rewards for Navigation][image1]
 
-### Hyperparameters 
+### Hyperparameters and Architecture 
 
-For the 1D case the hyperparameters were chosen to match those given in an example problem from there I adjusted each parameter individually to look for simple improvements however, even though the problem being solved is different the set of example parameters performed best.  
+For the 1D case the hyperparameters were chosen to match those given in an example problem from there I adjusted each parameter individually to look for simple improvements however, even though the problem being solved is different the set of example parameters performed best. 
+
+The architecture for the 1D case neural network is a simple feedforward network with three linear layers, and RELU activations to add nonlinearity representation.  
 
 For the 2D case a much lower ‘eps_start’ seemed to help the model train. I’m not sure how the CNN initialization coupled to exploration but letting the CNN pick actions early on was better than random choice. 
+
+The architecture for the 2D case neural network is a modest multilayer CNN each layer consists of two 2D convolutions. The first 2D convolution lengthens and the second squeezes the stack of features. In between the activations are regularized with batchnormilization and nonlinearity is added via SELU activations. A global average pooling layer compresses the final stack of features into a 1D vector which is then fed into a simple stack of linear layers to output the final action value pairs.
 
 There seems to be a lot that can be accomplished by tunning here however at this point exploration feels more like dart throwing than learning. 
 
